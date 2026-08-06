@@ -5,7 +5,6 @@
 ![TestNG](https://img.shields.io/badge/TestNG-FF6F00?style=for-the-badge&logo=testng&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![Allure](https://img.shields.io/badge/Allure_Report-28A745?style=for-the-badge&logo=qameta&logoColor=white)
-
 An end-to-end automated UI testing framework built for the **Swag Labs (SauceDemo)** e-commerce web application. Designed using the **Page Object Model (POM)** design pattern with **Selenium WebDriver**, **TestNG**, **Maven**, and **Allure Reports**.
 
 ---
@@ -53,4 +52,45 @@ To execute all automated tests via Maven, run:
 ```bash
 mvn clean test
 
+```
 
+### Generating the Interactive Allure Report
+
+After test execution completes, generate the full static HTML dashboard report by executing:
+
+```bash
+allure generate allure-results --single-file --clean -o allure-report
+
+```
+
+To view the live interactive report in your default browser:
+
+```bash
+allure open allure-report
+
+```
+
+---
+
+## 📌 Documented Test Failures (Bug Findings)
+
+Out of the 14 automated test cases executed, **2 tests failed as expected**. These failures represent **actual application bugs / specification discrepancies** on the real SauceDemo platform, validating the framework's capability to detect real defects:
+
+### 1. `testCheckoutWithEmptyCart`
+
+* **Expected Behavior:** The application should block users from proceeding to the checkout form when the cart is empty, displaying a validation error.
+* **Actual Behavior:** The platform allows users to navigate seamlessly into the checkout step even with an empty cart without showing any error.
+* **Finding:** Business logic gap in the application's checkout validation flow.
+
+### 2. `testSocialLinks` (X / Twitter)
+
+* **Expected Behavior:** Clicking the footer social icon should redirect to an updated URL containing `x.com`.
+* **Actual Behavior:** The application redirects to `[https://twitter.com/saucelabs](https://twitter.com/saucelabs)`.
+* **Finding:** Application-level outdated URL endpoint that has not been updated to reflect current branding requirements.
+
+---
+
+## 👤 Author
+
+* **Nada Nabil** - *Software Testing Engineer*
+* GitHub: [@nada15122](https://github.com/nada15122)
