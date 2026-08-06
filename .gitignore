@@ -1,0 +1,14 @@
+# Maven target folder
+target/
+
+# Allure raw results & generated reports
+allure-results/
+allure-report/
+
+# IDE specific files
+.idea/
+*.iml
+.DS_Store
+
+# Log files
+*.log
