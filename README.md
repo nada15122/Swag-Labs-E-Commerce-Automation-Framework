@@ -8,6 +8,7 @@
 An end-to-end automated UI testing framework built for the **Swag Labs (SauceDemo)** e-commerce web application. Designed using the **Page Object Model (POM)** design pattern with **Selenium WebDriver**, **TestNG**, **Maven**, and **Allure Reports**.
 
 ---
+🌐 **Live Allure Execution Report:** [View Test Report](https://nada15122.github.io/Swag-Labs-E-Commerce-Automation-Framework/)
 
 ## 🚀 Key Features
 
